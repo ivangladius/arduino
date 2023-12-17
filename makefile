@@ -14,14 +14,12 @@ monitor:
 
 project:
 	arduino-cli sketch new $(NAME)
-	mv makefile $(NAME)/makefile
-	mv README.md $(NAME)/README.me
+	cp makefile $(NAME)/makefile
+	mv README.me $(NAME)/README.me
 	rm -rf .git
-	mkdir src
-	mv $(NAME).ino src/$(NAME).ino
-
-
-
+	mkdir $(NAME)/src
+	mv $(NAME)/$(NAME).ino $(NAME)/src/$(NAME).ino
+	rm makefile
 
 
 
