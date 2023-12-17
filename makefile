@@ -15,7 +15,7 @@ monitor:
 project:
 	arduino-cli sketch new $(NAME)
 	cp makefile $(NAME)/makefile
-	mv README.me $(NAME)/README.me
+	mv README.md $(NAME)/README.md
 	rm -rf .git
 	mkdir $(NAME)/src
 	mv $(NAME)/$(NAME).ino $(NAME)/src/$(NAME).ino
