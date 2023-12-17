@@ -12,14 +12,16 @@ upload:
 monitor:
 	arduino-cli monitor -p $(PORT)
 
+NAME=main
+
 project:
 	arduino-cli sketch new $(NAME)
-	cp makefile $(NAME)/makefile
-	mv README.md $(NAME)/README.md
+	mv $(NAME)/$(NAME).ino .
+	rm -rf $(NAME)
+	rm -rf README.md
+	touch README.md
 	rm -rf .git
-	mkdir $(NAME)/src
-	mv $(NAME)/$(NAME).ino $(NAME)/src/$(NAME).ino
-	rm makefile
+
 
 
 
