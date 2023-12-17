@@ -17,6 +17,8 @@ project:
 	mv makefile $(NAME)/makefile
 	mv README.md $(NAME)/README.me
 	rm -rf .git
+	mkdir src
+	mv $(NAME).ino src/$(NAME).ino
 
 
 
