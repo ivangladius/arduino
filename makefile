@@ -12,6 +12,13 @@ upload:
 monitor:
 	arduino-cli monitor -p $(PORT)
 
+project:
+	arduino-cli sketch new $(NAME)
+	mv makefile $(NAME)/makefile
+	mv README.md $(NAME)/README.me
+	rm -rf .git
+
+
 
 
 
